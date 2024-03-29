@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    min-width: 320px;
+    background: rgb(80,80,80);
+    background: linear-gradient(0deg, rgba(80,80,80,1) 0%, rgba(247,247,247,1) 100%);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(247,247,247,0.2);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 100px;  
+}
+
+.logo_container{
+    display: flex;
+    align-items: center ;
+}
+    
+
+.header_logo{
+    width: 70px;
+    height: 70px;
+}
+
+
+
+.logo_text{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.logo_text_grand{
+    font-weight: 700;
+    font-size: 24px;
+}
+    
+
+
+.logo_text_medio{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav button {
+    position: relative;
+    display: flex;
+    min-width: 8rem;
+    min-height: 4rem;
+    margin: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: rgba(247,247,247,0.7);
+    border: none;
+    border-bottom: 0.2rem solid rgba(82, 82, 82, 0.7);
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s ease all;
+    cursor: pointer;
+}
+nav button:hover {
+    
+    background-color: rgba(247,247,247,0.4);
+}
+
+nav button:active {
+    border: 1px solid rgba(247,247,247,0.7);
+    transform: scale(0.95);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+.usuario button {
+        appearance: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        isolation: isolate;
+    }
+    
+    .button {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+        width: 100px;
+        border-radius: 9999rem;
+        background: #efefef;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    
+    & > span.text {
+        color: transparent;
+        width: 100%;
+        text-align: left;
+        padding-block: 12px;
+        padding-left: 14px;
+        z-index: 2;
+        transition: all 200ms ease;
+    }
+    
+    & > div.overlay {
+        color: #ededed;
+        width: 48px;
+        height: calc(100% - 2px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12px;
+        border-radius: inherit;
+        background: #242424;
+        position: absolute;
+        right: 1px;
+        z-index: 1;
+        transition: all 400ms ease;
+    }
+    
+    &:is(:hover, :focus) {
+        & > span.text {
+        color: #ededed;
+        }
+        & > div.overlay {
+        width: calc(100% - 2px);
+        transition: width 200ms ease;
+        }
+    }
+    }
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */   
+
+
+/* Media Query para ocultar botão em telas menores */
+@media (max-width: 768px) {
+header{
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+    flex-direction: column;
+}
+nav button{
+    width: 100%;
+}
+.usuario button {
+    display: none;
+}
+}
+
+/* Main */
+main {
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Layout Flexbox para responsividade */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajustar espaçamento em layouts menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+a:hover {
+    border-color: #f00;
+}
+
+/* Estilos para elementos recursivos (se necessário) */
+.container .container {
+/* Estilos específicos para containers aninhados */
+    border-color: #ccc;
+    margin: 10px;
+}
+
+/* Media

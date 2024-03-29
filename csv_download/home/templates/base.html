@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+        {% block title %}
+            Django App
+        {% endblock %}
+        </title>
+        <link rel="stylesheet"type="text/css"href="../static/base.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo_container">
+                <img src="{% static 'logo.png' %}" alt="logo" class="header_logo"/>
+                <div class="logo_text"> 
+                  <span class="logo_text_grand">Corinthia</span>
+                  <span class="logo_text_medio">Corinthia</span>
+                </div>
+            </div>
+            <nav>
+              <button>Home</button>
+              <button>Download</button>
+              <button>Sobre</button>
+            </nav>
+            <div class="usuario">
+                <button class="button">
+                    <span class="text">GitHub</span>
+                    <div class="overlay">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </div>
+                  </button>
+            </div>
+        </header>
+        <main>
+            <section class="container">
+                {% block content %} {% endblock %}
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2024</p>
+        </footer>
+
+    </body>
+</html>
